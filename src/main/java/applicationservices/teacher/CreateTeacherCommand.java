@@ -1,4 +1,4 @@
-package schema;
+package applicationservices.teacher;
 import java.util.UUID;
  
 /**

@@ -1,12 +1,13 @@
+package applicationservices.teacher;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import domain.Teacher;
 import domain.TeacherRepository;
-import applicationservice.CreateTeacherCommandHandler;
-import applicationservice.Handles;
-import schema.CreateTeacherCommand;
+import applicationservices.Handles;
+import applicationservices.teacher.CreateTeacherCommand;
+import applicationservices.teacher.CreateTeacherCommandHandler;
 
 import java.util.UUID;
 
@@ -17,7 +18,7 @@ import static org.mockito.Mockito.verify;
 /**
  * Created by agjendem on 27.05.2014.
  */
-public class WhateverTest {
+public class CreateTeacherCommandHandlerTest {
 
     @Test
     public void shouldNotThrowExceptionWhenHandlingCreateTeacherCommand() {

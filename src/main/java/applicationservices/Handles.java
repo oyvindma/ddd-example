@@ -1,4 +1,4 @@
-package applicationservice;
+package applicationservices;
 /**
  * Created by agjendem on 27.05.2014.
  */
