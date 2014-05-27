@@ -18,7 +18,7 @@ public class WhateverTest {
         // Given
         CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(null, "No Name");
         TeacherRepository teacherRepositoryMock = mock(TeacherRepository.class);
-        Handler createTeacherHandler = new CreateTeacherHandler(teacherRepositoryMock);
+        Handler<CreateTeacherCommand> createTeacherHandler = new CreateTeacherHandler(teacherRepositoryMock);
 
         try {
             // When
