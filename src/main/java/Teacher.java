@@ -1,0 +1,14 @@
+import java.util.UUID;
+
+
+public class Teacher {
+
+	private UUID teacherId;
+	private String name;
+
+	public Teacher(UUID teacherId, String name) {
+		this.teacherId = teacherId;
+		this.name = name;
+	}
+
+}
