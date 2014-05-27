@@ -3,10 +3,15 @@
  */
 public class CreateTeacherHandler implements Handler<CreateTeacherCommand> {
 
+    private final TeacherRepository teacherRepository;
+
+    public CreateTeacherHandler(TeacherRepository teacherRepository) {
+        this.teacherRepository = teacherRepository;
+    }
+
     @Override
     public void handle(CreateTeacherCommand createTeacherCommand) {
-        // Hent id
-        // Hent lærer fra repo
-        //
+        Teacher teacher = new Teacher(createTeacherCommand.getUuid(), createTeacherCommand.getName());
+        this.teacherRepository.add(teacher);
     }
 }

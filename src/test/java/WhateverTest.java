@@ -1,7 +1,12 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 
 import java.util.UUID;
+
+import static junit.framework.TestCase.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 /**
  * Created by agjendem on 27.05.2014.
@@ -11,8 +16,9 @@ public class WhateverTest {
     @Test
     public void shouldNotThrowExceptionWhenHandlingCreateTeacherCommand() {
         // Given
-        CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(null);
-        Handler createTeacherHandler = new CreateTeacherHandler();
+        CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(null, "No Name");
+        TeacherRepository teacherRepositoryMock = mock(TeacherRepository.class);
+        Handler createTeacherHandler = new CreateTeacherHandler(teacherRepositoryMock);
 
         try {
             // When
@@ -26,14 +32,16 @@ public class WhateverTest {
     @Test
     public void shouldCreateTeacherWhenHandlingCreateTeacherCommand() {
         // Given
-        TeacherRepository teacherRepositoryMock = ;
         CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(UUID.randomUUID(), "Felicia Random");
-        Handler addTeacherHandler = new CreateTeacherHandler(teacherRepositoryMock);
+        TeacherRepository teacherRepositoryMock = mock(TeacherRepository.class);
+        Handler<CreateTeacherCommand> addTeacherHandler = new CreateTeacherHandler(teacherRepositoryMock);
 
         // When
         addTeacherHandler.handle(createTeacherCommand);
 
         // Then
-        verify(teacherRepositoryMock).add();
+        ArgumentCaptor<Teacher> teacherArgument = ArgumentCaptor.forClass(Teacher.class);
+        verify(teacherRepositoryMock).add(teacherArgument.capture());
+        assertEquals("Felicia Random", teacherArgument.getValue().getName());
     }
 }
