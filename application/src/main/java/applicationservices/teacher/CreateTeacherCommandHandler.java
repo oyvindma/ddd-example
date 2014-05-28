@@ -17,8 +17,10 @@ public class CreateTeacherCommandHandler implements
 	}
 
 	public void handle(CreateTeacherCommand createTeacherCommand) {
-		Teacher teacher = new Teacher(createTeacherCommand.getTeacherId(),
-				createTeacherCommand.getName());
+		Teacher teacher = new Teacher(
+                createTeacherCommand.getTeacherId(),
+				createTeacherCommand.getName(),
+                createTeacherCommand.getMaxStudents());
 		this.teacherRepository.save(teacher);
 	}
 }

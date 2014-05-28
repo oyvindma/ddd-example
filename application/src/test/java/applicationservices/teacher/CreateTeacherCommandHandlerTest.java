@@ -21,7 +21,7 @@ public class CreateTeacherCommandHandlerTest {
     @Test
     public void shouldNotThrowExceptionWhenHandlingCreateTeacherCommand() {
         // Given
-        CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(null, "No Name");
+        CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(null, "No Name", 1);
         TeacherRepository teacherRepositoryMock = mock(TeacherRepository.class);
         Handles<CreateTeacherCommand> createTeacherHandler = new CreateTeacherCommandHandler(teacherRepositoryMock);
 
@@ -37,7 +37,7 @@ public class CreateTeacherCommandHandlerTest {
     @Test
     public void shouldCreateTeacherWhenHandlingCreateTeacherCommand() {
         // Given
-        CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(UUID.randomUUID(), "Felicia Random");
+        CreateTeacherCommand createTeacherCommand = new CreateTeacherCommand(UUID.randomUUID(), "Felicia Random", 1);
         TeacherRepository teacherRepositoryMock = mock(TeacherRepository.class);
         Handles<CreateTeacherCommand> addTeacherHandler = new CreateTeacherCommandHandler(teacherRepositoryMock);
 

@@ -6,19 +6,19 @@ import java.util.UUID;
 public class CreateCourseCommand {
 
 	private UUID courseId;
-	private String couseName;
+	private String courseName;
 
-	public CreateCourseCommand(UUID courseId, String couseName) {
+	public CreateCourseCommand(UUID courseId, String courseName) {
 		this.courseId = courseId;
-		this.couseName = couseName;
+		this.courseName = courseName;
 	}
 
 	public UUID getCourseId() {
 		return courseId;
 	}
 
-	public String getCouseName() {
-		return couseName;
+	public String getCourseName() {
+		return courseName;
 	}
 
 

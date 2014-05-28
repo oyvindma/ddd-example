@@ -7,10 +7,12 @@ public class CreateTeacherCommand { // Message
 
     private final UUID teacherId;
     private final String name;
+    private final int maxStudents;
 
-    public CreateTeacherCommand(UUID teacherId, String name) {
+    public CreateTeacherCommand(UUID teacherId, String name, int maxStudents) {
         this.teacherId = teacherId;
         this.name = name;
+        this.maxStudents = maxStudents;
     }
 
     public UUID getTeacherId() {
@@ -19,5 +21,9 @@ public class CreateTeacherCommand { // Message
 
     public String getName() {
         return name;
+    }
+
+    public int getMaxStudents() {
+        return this.maxStudents;
     }
 }

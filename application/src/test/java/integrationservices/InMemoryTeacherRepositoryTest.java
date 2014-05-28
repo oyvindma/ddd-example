@@ -15,7 +15,7 @@ public class InMemoryTeacherRepositoryTest {
 	@Test
 	public void shouldNotFailWhenAddingTeacher() throws Exception {
 		TeacherRepository repo = new InMemoryTeacherRepository();
-		repo.save(new Teacher(UUID.randomUUID(), "Tanja the Teacher"));
+		repo.save(new Teacher(UUID.randomUUID(), "Tanja the Teacher", 1));
 	}
 	
 	@Test
@@ -24,7 +24,7 @@ public class InMemoryTeacherRepositoryTest {
 		TeacherRepository repo = new InMemoryTeacherRepository();
 		
 		UUID teacherId = UUID.randomUUID();
-		Teacher teacher = new Teacher(teacherId, "Tanja the Teacher");
+		Teacher teacher = new Teacher(teacherId, "Tanja the Teacher", 26);
 		
 		repo.save(teacher);
 		

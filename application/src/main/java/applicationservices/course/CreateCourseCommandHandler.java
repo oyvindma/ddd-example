@@ -14,7 +14,7 @@ public class CreateCourseCommandHandler implements Handles<CreateCourseCommand>{
 	}
 
 	public void handle(CreateCourseCommand command) {
-		inMemoryCourseRepository.save(new Course(command.getCourseId(), command.getCouseName()));
+		inMemoryCourseRepository.save(new Course(command.getCourseId(), command.getCourseName()));
 	}
 
 }
