@@ -2,9 +2,7 @@ package applicationservices.teacher;
 
 import java.util.UUID;
  
-/**
- * Created by agjendem on 27.05.2014.
- */
+// TODO: Could be generated from a Google Protocol Buffer file (.proto) - which we share as our schema with the client(s)
 public class CreateTeacherCommand { // Message
 
     private final UUID teacherId;
