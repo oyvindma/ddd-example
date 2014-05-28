@@ -1,4 +1,4 @@
-package teacher;
+package applicationservices.teacher;
 import applicationservices.Handles;
 import applicationservices.teacher.CreateTeacherCommandHandler;
 import applicationservices.teacher.CreateTeacherCommand;

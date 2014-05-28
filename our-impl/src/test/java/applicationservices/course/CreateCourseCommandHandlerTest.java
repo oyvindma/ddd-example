@@ -1,4 +1,4 @@
-package applicationservices.course.course;
+package applicationservices.course;
 
 import applicationservices.course.CreateCourseCommand;
 import applicationservices.course.CreateCourseCommandHandler;
