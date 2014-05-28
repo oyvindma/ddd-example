@@ -1,6 +1,4 @@
 package integrationservices;
-import static org.junit.Assert.*;
-import integrationservices.InMemoryTeacherRepository;
 
 import java.util.UUID;
 

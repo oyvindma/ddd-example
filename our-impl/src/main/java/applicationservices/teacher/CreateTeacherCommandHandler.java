@@ -1,6 +1,7 @@
 package applicationservices.teacher;
 
 import applicationservices.Handles;
+import applicationservices.teacher.applicationservices.teacher.CreateTeacherCommand;
 import domain.Teacher;
 import domain.TeacherRepository;
 
@@ -17,7 +18,7 @@ public class CreateTeacherCommandHandler implements
 	}
 
 	public void handle(CreateTeacherCommand createTeacherCommand) {
-		Teacher teacher = new Teacher(createTeacherCommand.getUuid(),
+		Teacher teacher = new Teacher(createTeacherCommand.getTeacherId(),
 				createTeacherCommand.getName());
 		this.teacherRepository.add(teacher);
 	}

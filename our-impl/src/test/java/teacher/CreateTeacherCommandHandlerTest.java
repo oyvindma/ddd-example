@@ -1,13 +1,13 @@
-package applicationservices.teacher;
+package teacher;
+import applicationservices.Handles;
+import applicationservices.teacher.CreateTeacherCommandHandler;
+import applicationservices.teacher.applicationservices.teacher.CreateTeacherCommand;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import domain.Teacher;
 import domain.TeacherRepository;
-import applicationservices.Handles;
-import applicationservices.teacher.CreateTeacherCommand;
-import applicationservices.teacher.CreateTeacherCommandHandler;
 
 import java.util.UUID;
 
