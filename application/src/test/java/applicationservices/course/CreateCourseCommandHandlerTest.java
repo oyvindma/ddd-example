@@ -15,7 +15,7 @@ public class CreateCourseCommandHandlerTest {
 	public void shouldNotThrowExceptionWhenHandlingCreateCourseCommand() {
 		// Given
 		CreateCourseCommand createCourseCommand = new CreateCourseCommand(
-				UUID.randomUUID(), "applicationservices.course.course name");
+				UUID.randomUUID(), "Course name");
 		CreateCourseCommandHandler createCourseCommandHandler = new CreateCourseCommandHandler(
 				new InMemoryCourseRepository());
 
@@ -33,7 +33,7 @@ public class CreateCourseCommandHandlerTest {
 		// When
 		UUID courseId = UUID.randomUUID();
 		CreateCourseCommand createCourseCommand = new CreateCourseCommand(
-				courseId, "applicationservices.course.course name");
+				courseId, "Course name");
 		commandHandler.handle(createCourseCommand);
 
 		// Then
