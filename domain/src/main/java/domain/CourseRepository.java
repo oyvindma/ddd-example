@@ -8,4 +8,5 @@ public interface CourseRepository {
 
 	Course get(UUID courseId);
 
+    // or return some Aggregate root
 }

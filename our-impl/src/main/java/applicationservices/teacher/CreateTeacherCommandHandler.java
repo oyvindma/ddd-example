@@ -19,6 +19,6 @@ public class CreateTeacherCommandHandler implements
 	public void handle(CreateTeacherCommand createTeacherCommand) {
 		Teacher teacher = new Teacher(createTeacherCommand.getTeacherId(),
 				createTeacherCommand.getName());
-		this.teacherRepository.add(teacher);
+		this.teacherRepository.save(teacher);
 	}
 }

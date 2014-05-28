@@ -6,8 +6,9 @@ import java.util.UUID;
  */
 public interface TeacherRepository {
 
-	//TODO save
-    void add(Teacher teacher);
+    void save(Teacher teacher);
 
 	Teacher get(UUID teacherId);
+
+    // or return some Aggregate root
 }

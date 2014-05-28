@@ -11,7 +11,7 @@ public class InMemoryTeacherRepository implements TeacherRepository {
 
 	private Map<UUID, Teacher> teacherRepository = new HashMap<UUID, Teacher>();
 
-	public void add(Teacher teacher) {
+	public void save(Teacher teacher) {
 		teacherRepository.put(teacher.getTeacherID(), teacher);
 	}
 

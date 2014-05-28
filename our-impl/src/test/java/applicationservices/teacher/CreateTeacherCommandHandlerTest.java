@@ -1,7 +1,5 @@
 package applicationservices.teacher;
 import applicationservices.Handles;
-import applicationservices.teacher.CreateTeacherCommandHandler;
-import applicationservices.teacher.CreateTeacherCommand;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -48,7 +46,7 @@ public class CreateTeacherCommandHandlerTest {
 
         // Then
         ArgumentCaptor<Teacher> teacherArgument = ArgumentCaptor.forClass(Teacher.class);
-        verify(teacherRepositoryMock).add(teacherArgument.capture());
+        verify(teacherRepositoryMock).save(teacherArgument.capture());
         assertEquals("Felicia Random", teacherArgument.getValue().getName());
     }
 }
