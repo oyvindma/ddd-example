@@ -2,6 +2,7 @@ package applicationservices.course;
 
 import applicationservices.course.CreateCourseCommand;
 import applicationservices.course.CreateCourseCommandHandler;
+import domain.CourseRepository;
 import integrationservices.InMemoryCourseRepository;
 
 import java.util.UUID;
@@ -26,14 +27,12 @@ public class CreateCourseCommandHandlerTest {
 	@Test
 	public void shouldPersistCourse() {
 		// Given
-		InMemoryCourseRepository courseRepository = new InMemoryCourseRepository();
-		CreateCourseCommandHandler commandHandler = new CreateCourseCommandHandler(
-				courseRepository);
+		CourseRepository courseRepository = new InMemoryCourseRepository();
+		CreateCourseCommandHandler commandHandler = new CreateCourseCommandHandler(courseRepository);
 
 		// When
 		UUID courseId = UUID.randomUUID();
-		CreateCourseCommand createCourseCommand = new CreateCourseCommand(
-				courseId, "Course name");
+		CreateCourseCommand createCourseCommand = new CreateCourseCommand(courseId, "Course name");
 		commandHandler.handle(createCourseCommand);
 
 		// Then
