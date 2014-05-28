@@ -1,7 +1,6 @@
 package applicationservices.teacher;
 
 import applicationservices.Handles;
-import applicationservices.teacher.applicationservices.teacher.CreateTeacherCommand;
 import domain.Teacher;
 import domain.TeacherRepository;
 

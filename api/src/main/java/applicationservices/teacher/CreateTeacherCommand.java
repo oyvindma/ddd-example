@@ -1,4 +1,4 @@
-package applicationservices.teacher.applicationservices.teacher;
+package applicationservices.teacher;
 
 import java.util.UUID;
  

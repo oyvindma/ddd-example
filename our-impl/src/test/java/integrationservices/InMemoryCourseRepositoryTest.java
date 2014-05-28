@@ -13,7 +13,7 @@ public class InMemoryCourseRepositoryTest {
 	@Test
 	public void shouldNotFailWhenAddingClass() throws Exception {
 		CourseRepository repo = new InMemoryCourseRepository();
-		repo.save(new Course(UUID.randomUUID(), "Chemics course"));
+		repo.save(new Course(UUID.randomUUID(), "Chemics applicationservices.course.course"));
 	}
 
 	@Test
@@ -22,7 +22,7 @@ public class InMemoryCourseRepositoryTest {
 		CourseRepository repo = new InMemoryCourseRepository();
 
 		UUID courseId = UUID.randomUUID();
-		Course course = new Course(courseId, "C#-course");
+		Course course = new Course(courseId, "C#-applicationservices.course.course");
 
 		repo.save(course);
 

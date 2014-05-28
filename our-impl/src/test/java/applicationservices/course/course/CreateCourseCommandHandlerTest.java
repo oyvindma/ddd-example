@@ -1,5 +1,7 @@
-package applicationservices.course;
+package applicationservices.course.course;
 
+import applicationservices.course.CreateCourseCommand;
+import applicationservices.course.CreateCourseCommandHandler;
 import integrationservices.InMemoryCourseRepository;
 
 import java.util.UUID;
@@ -13,7 +15,7 @@ public class CreateCourseCommandHandlerTest {
 	public void shouldNotThrowExceptionWhenHandlingCreateCourseCommand() {
 		// Given
 		CreateCourseCommand createCourseCommand = new CreateCourseCommand(
-				UUID.randomUUID(), "course name");
+				UUID.randomUUID(), "applicationservices.course.course name");
 		CreateCourseCommandHandler createCourseCommandHandler = new CreateCourseCommandHandler(
 				new InMemoryCourseRepository());
 
@@ -31,7 +33,7 @@ public class CreateCourseCommandHandlerTest {
 		// When
 		UUID courseId = UUID.randomUUID();
 		CreateCourseCommand createCourseCommand = new CreateCourseCommand(
-				courseId, "course name");
+				courseId, "applicationservices.course.course name");
 		commandHandler.handle(createCourseCommand);
 
 		// Then
