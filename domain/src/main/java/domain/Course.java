@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
@@ -10,7 +11,7 @@ public class Course {
     private int maxStudents;
 
     // Track assigned teachers, but these are used at repo-level in our relational model
-    private Set<UUID> teacherIds;
+    private Set<UUID> teacherIds = new HashSet<UUID>();
 
 	public Course(UUID courseId, String courseName) {
 		this.courseId = courseId;
@@ -27,5 +28,9 @@ public class Course {
             this.maxStudents = teacher.getMaxStudents();
         }
         this.teacherIds.add(teacher.getTeacherID());
+    }
+
+    public boolean isAssigned(Teacher teacher) {
+        return this.teacherIds.contains(teacher.getTeacherID());
     }
 }

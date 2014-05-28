@@ -11,8 +11,9 @@ public class AssignTeacherToCourseCommandHandler implements Handles<AssignTeache
     private TeacherRepository teacherRepository;
 
     // TODO: Could be replaced with injecting the dependencies directly into Handle, using Lambdas
-	public AssignTeacherToCourseCommandHandler(CourseRepository courseRepository) {
+	public AssignTeacherToCourseCommandHandler(CourseRepository courseRepository, TeacherRepository teacherRepository) {
         this.courseRepository = courseRepository;
+        this.teacherRepository = teacherRepository;
 	}
 
 	public void handle(AssignTeacherToCourseCommand command) {
