@@ -12,7 +12,7 @@
 
     <modules>
         <module>api</module>
-        <module>our-impl</module>
+        <module>application</module>
         <module>domain</module>
     </modules>
 </project>
