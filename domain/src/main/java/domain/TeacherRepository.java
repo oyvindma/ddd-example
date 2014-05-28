@@ -8,7 +8,6 @@ public interface TeacherRepository {
 
     void save(Teacher teacher);
 
+    // return the Aggregate root
 	Teacher get(UUID teacherId);
-
-    // or return some Aggregate root
 }
