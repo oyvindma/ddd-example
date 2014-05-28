@@ -1,20 +1,20 @@
 package applicationservices.course;
 
 import domain.Course;
-import integrationservices.InMemoryCourseRepository;
+import domain.CourseRepository;
 import applicationservices.Handles;
 
 public class CreateCourseCommandHandler implements Handles<CreateCourseCommand>{
 
-	private InMemoryCourseRepository inMemoryCourseRepository;
+	private CourseRepository courseRepository;
 
-	public CreateCourseCommandHandler(
-			InMemoryCourseRepository inMemoryCourseRepository) {
-				this.inMemoryCourseRepository = inMemoryCourseRepository;
+    // TODO: Could be replaced with injecting the dependencies directly into Handle, using Lambdas
+	public CreateCourseCommandHandler(CourseRepository courseRepository) {
+        this.courseRepository = courseRepository;
 	}
 
 	public void handle(CreateCourseCommand command) {
-		inMemoryCourseRepository.save(new Course(command.getCourseId(), command.getCourseName()));
+		courseRepository.save(new Course(command.getCourseId(), command.getCourseName()));
 	}
 
 }

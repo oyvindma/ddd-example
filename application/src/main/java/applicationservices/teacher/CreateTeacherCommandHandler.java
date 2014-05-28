@@ -4,14 +4,12 @@ import applicationservices.Handles;
 import domain.Teacher;
 import domain.TeacherRepository;
 
-/**
- * Created by agjendem on 27.05.2014.
- */
 public class CreateTeacherCommandHandler implements
 		Handles<CreateTeacherCommand> {
 
 	private final TeacherRepository teacherRepository;
 
+    // TODO: Could be replaced with injecting the dependencies directly into Handle, using Lambdas
 	public CreateTeacherCommandHandler(TeacherRepository teacherRepository) {
 		this.teacherRepository = teacherRepository;
 	}
