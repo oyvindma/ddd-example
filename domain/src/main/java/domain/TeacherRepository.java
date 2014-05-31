@@ -1,4 +1,5 @@
 package domain;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -10,4 +11,5 @@ public interface TeacherRepository {
 
     // return the Aggregate root
 	Teacher get(UUID teacherId);
+	
 }

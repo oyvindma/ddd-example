@@ -21,5 +21,5 @@ public class AssignTeacherToCourseCommandHandler implements Handles<AssignTeache
         course.assignTeacher(teacherRepository.get(command.getTeacherId()));
         courseRepository.save(course);
 	}
-
+	
 }

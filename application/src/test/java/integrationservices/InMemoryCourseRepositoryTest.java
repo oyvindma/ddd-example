@@ -28,4 +28,5 @@ public class InMemoryCourseRepositoryTest {
 
 		Assertions.assertThat(repo.get(courseId)).isEqualTo(course);
 	}
+	
 }
