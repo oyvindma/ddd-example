@@ -33,4 +33,8 @@ public class Course {
     public boolean isAssigned(Teacher teacher) {
         return this.teacherIds.contains(teacher.getTeacherID());
     }
+
+	public boolean isHeldByTeacher(UUID teacherId) {
+		return teacherIds.contains(teacherId);
+	}
 }
